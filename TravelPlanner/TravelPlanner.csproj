@@ -19,4 +19,19 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\francja.png" />
+      <AvaloniaResource Include="Assets\francja.png" />
+      <None Remove="Assets\japonia.png" />
+      <AvaloniaResource Include="Assets\japonia.png" />
+      <None Remove="Assets\norwegia.png" />
+      <AvaloniaResource Include="Assets\norwegia.png" />
+      <None Remove="Assets\polska.png" />
+      <AvaloniaResource Include="Assets\polska.png" />
+      <None Remove="Assets\usa.png" />
+      <AvaloniaResource Include="Assets\usa.png" />
+      <None Remove="Assets\włochy.png" />
+      <AvaloniaResource Include="Assets\włochy.png" />
+    </ItemGroup>
 </Project>

@@ -38,7 +38,7 @@
                                 <ComboBoxItem Content="Polska"/>
                         </ComboBox>
                         
-                        <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ZdjecieKraju"/>
+                        <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ZdjecieKraju" Width="300"/>
                         
                         <TextBlock Grid.Row="3" Grid.Column="0" Text="Atrakcje turystyczne:" Padding="8" Margin="8" FontWeight="Bold"/>
                         <StackPanel Grid.Row="3" Grid.Column="1" x:Name="CheckBoxes" Margin="8">
