@@ -4,6 +4,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="TravelPlanner.SecondWindow"
-        Title="SecondWindow">
-    
+        Title="Szczegółowe podsumowanie zaplanowanej podróży"
+        Padding="50">
+        
+        <ScrollViewer>
+                <StackPanel Margin="10" >
+                        <TextBlock x:Name="Podsumowanie" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Margin="8" Padding="8"/>
+                        <Image x:Name="ZdjecieKraju2" Width="300" Margin="8"/>
+                </StackPanel>
+        </ScrollViewer>
+        
 </Window>

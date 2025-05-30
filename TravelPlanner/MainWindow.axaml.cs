@@ -79,7 +79,7 @@ public partial class MainWindow : Window
             Pociag.IsChecked == true ? "Pociag" :
             Statek.IsChecked == true ? "Statek" : "";
         
-        var miasta = string.Join(", ", Miasta.SelectedItems.Cast<string>());
+        var miasta = string.Join(", ", Miasta.Items.Cast<string>());
         
         var SecondWindow = new SecondWindow(imie, kraj, atrakcje, transport, miasta);
         SecondWindow.Show();
