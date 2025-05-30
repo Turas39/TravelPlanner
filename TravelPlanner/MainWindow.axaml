@@ -4,6 +4,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="TravelPlanner.MainWindow"
-        Title="TravelPlanner">
-    Welcome to Avalonia!
+        Title="TravelPlanner"
+        Padding="50">
+        
+        <ScrollViewer HorizontalAlignment="Center" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Imię i nazwisko:" Padding="8" Margin="8" FontWeight="Bold"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" x:Name="ImieNazwisko" Padding="8" Margin="8"/>
+                        
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Kraj docelowy podróży:" Padding="8" Margin="8" FontWeight="Bold"/>
+                        <ComboBox Grid.Row="1" Grid.Column="1" x:Name="Kraj" SelectionChanged="Kraj_OnSelectionChanged" Padding="8" Margin="8">
+                                <ComboBoxItem Content="Włochy"/>
+                                <ComboBoxItem Content="Japonia"/>
+                                <ComboBoxItem Content="Norwegia"/>
+                                <ComboBoxItem Content="USA"/>
+                                <ComboBoxItem Content="Francja"/>
+                                <ComboBoxItem Content="Polska"/>
+                        </ComboBox>
+                        
+                        <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ZdjecieKraju"/>
+                        
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Atrakcje turystyczne:" Padding="8" Margin="8" FontWeight="Bold"/>
+                        <StackPanel Grid.Row="3" Grid.Column="1" x:Name="CheckBoxes" Margin="8">
+                                <CheckBox x:Name="MuzeaAtrakcje" Content="Muzea"/>
+                                <CheckBox x:Name="ParkiNarodoweAtrakcje" Content="Parki Narodowe"/>
+                                <CheckBox x:Name="ZabytkiAtrakcje" Content="Zabytki"/>
+                                <CheckBox x:Name="RestauracjeAtrakcje" Content="Restauracje"/>
+                                <CheckBox x:Name="GalerieSztukiAtrakcje" Content="Galerie Sztuki"/>
+                                <CheckBox x:Name="FestiwaleAtrakcje" Content="Festiwale i koncerty"/>
+                        </StackPanel>
+                        
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Środek transportu:" Padding="8" Margin="8" FontWeight="Bold"/>
+                        <StackPanel Grid.Row="4" Grid.Column="1" x:Name="RadioButtons" Margin="8">
+                                <RadioButton x:Name="Samolot" Content="Samolot" GroupName="Transport"/>
+                                <RadioButton x:Name="Samochód" Content="Samochód" GroupName="Transport"/>
+                                <RadioButton x:Name="Pociag" Content="Pociąg" GroupName="Transport"/>
+                                <RadioButton x:Name="Statek" Content="Statek" GroupName="Transport"/>
+                        </StackPanel>
+                        
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Miasta do odwiedzenia:" Padding="8" Margin="8" FontWeight="Bold"/>
+                        <StackPanel Grid.Row="5" Grid.Column="1" Margin="8">
+                                <ListBox x:Name="Miasta" SelectionMode="Multiple" />
+                                <StackPanel Margin="8">
+                                        <TextBox x:Name="Miasto" Margin="8" Padding="8"/>
+                                        <Button Content="Dodaj miasto" Click="Button_OnClick" Margin="8" Padding="8"/>
+                                </StackPanel>
+                        </StackPanel>
+                        
+                        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Content="Pokaż szczegóły podróży" Click="Button_OnClick2" HorizontalAlignment="Center" Margin="8" Padding="8"/>
+                </Grid>
+        </ScrollViewer>
 </Window>
